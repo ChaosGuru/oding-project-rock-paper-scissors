@@ -1,0 +1,22 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+}
+
+main {
+    /* border: 2px red solid; */
+}
+
+#players {
+    display: flex;
+    flex-direction: row;
+}
+
+#players > div {
+    width: 50vw;
+    height: 100vh;
+    border: 2px green solid;
+}

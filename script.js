@@ -23,17 +23,23 @@ const score = {
     "robot": 5,
 };
 
+const wins = 0;
+
 
 function war(userChoice) {
     const robotChoice = getRobotChoice();
     fight(userChoice, robotChoice);
     
     if (score["user"] == 0) {
+        wins += 1;
         endScreen("robot");
+
         console.log("%cLOSE", "background-color: red; font-size: 20px;");
     }
     else if (score["robot"] == 0) {
+        wins = 0;
         endScreen("user");
+
         console.log("%cWIN", "background-color: green; font-size: 20px;");
     }
 }

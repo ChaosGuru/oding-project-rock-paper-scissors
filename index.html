@@ -9,29 +9,31 @@
 </head>
 <body>
     <main>
-        <div id="user">
-            <div id="hp-bar">
+        <div id="players">
+            <div id="user">
+                <div class="hp-bar">
+                    <progress value="100" max="100"></progress>
+                </div>
+                <div class="avatar">
 
+                </div>
+                <div id="choices">
+                    <button id="scissors">Scissors</button>
+                    <button id="paper">Paper</button>
+                    <button id="rock">Rock</button>
+                </div>
             </div>
-            <div id="avatar">
+            <div id="robot">
+                <div class="hp-bar">
+                    <progress value="100" max="100"></progress>
+                </div>
+                <div class="avatar">
 
+                </div>
             </div>
-            <div id="choices">
-                <button id="scissors">Scissors</button>
-                <button id="paper">Paper</button>
-                <button id="rock">Rock</button>
+            <div id="end-screen" style="display: none;">
+                <button>Play Again</button>
             </div>
-        </div>
-        <div id="robot">
-            <div id="hp-bar">
-
-            </div>
-            <div id="avatar">
-
-            </div>
-        </div>
-        <div id="end-screen" style="display: none;">
-            <button>Play Again</button>
         </div>
     </main>
     <script src="script.js"></script>
