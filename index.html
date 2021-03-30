@@ -4,20 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
     <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <main>
+        <h1 id="title">After long day you need fight for last ice cream, what a day(</h1>
         <div id="players">
             <div id="user">
                 <div class="hp-bar">
-                    <progress value="100" max="100"></progress>
+                    <progress value="5" max="5"></progress>
                 </div>
+                <div class="nick">Ruler of his destiny</div>
                 <div class="avatar">
-
+                    <img src="images/player.png" alt="player">
                 </div>
-                <div id="choices">
+                <div id="choices" class="btns">
                     <button id="scissors">Scissors</button>
                     <button id="paper">Paper</button>
                     <button id="rock">Rock</button>
@@ -25,10 +29,16 @@
             </div>
             <div id="robot">
                 <div class="hp-bar">
-                    <progress value="100" max="100"></progress>
+                    <progress value="5" max="5"></progress>
                 </div>
+                <div class="nick">Ice cream stealer</div>
                 <div class="avatar">
-
+                    <img src="images/enemy5.png" alt="">
+                </div>
+                <div class="btns">
+                    <button id="scissors">Scissors</button>
+                    <button id="paper">Paper</button>
+                    <button id="rock">Rock</button>
                 </div>
             </div>
             <div id="end-screen" style="display: none;">

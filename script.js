@@ -23,7 +23,7 @@ const score = {
     "robot": 5,
 };
 
-const wins = 0;
+let wins = 0;
 
 
 function war(userChoice) {
@@ -54,21 +54,19 @@ function fight(userChoice, robotChoice) {
     if (winTable[userChoice] === robotChoice) {
         score["robot"] -= 1;
         
-        console.log("Win!")
+        console.log("Win!");
         
-        // win animation
+        changeBar("#robot", score["robot"]);
     }
     else if (winTable[robotChoice] === userChoice) {
         score["user"] -= 1;
         
-        console.log("Lose!")
+        console.log("Lose!");
         
-        // lose animation
+        changeBar("#user", score["user"]);
     }
     else {
-        console.log("Draw!")
-        
-        // draw animation
+        console.log("Draw!");
     }
 }
 
@@ -81,4 +79,11 @@ function getRobotChoice() {
 function endScreen(winner) {
     score["user"] = 5;
     score["robot"] = 5;
+    changeBar("#user", score["user"]);
+    changeBar("#robot", score["robot"]);
+}
+
+function changeBar(id, value) {
+    bar = document.querySelector(`${id} .hp-bar progress`);
+    bar.value = value;
 }
